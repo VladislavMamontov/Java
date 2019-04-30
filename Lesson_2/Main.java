@@ -1,4 +1,4 @@
-package Lesson_2;
+﻿package Lesson_2;
 
 public class Main {
     public static void main (String[] args){
@@ -27,7 +27,7 @@ public class Main {
             list1.selectionSort(new Comparator());
             selectionSortTime[i] = System.currentTimeMillis() - time;
             for (int j = 0; j < list2.size(); j++) {
-                list1.add(list2.get(i));
+                list1.set(j, list2.get(j));
             }
         }
         long sumOfSelectionSortTime = 0;
@@ -40,7 +40,7 @@ public class Main {
             list1.insertionSort(new Comparator());
             insertionSortTime[i] = System.currentTimeMillis() - time;
             for (int j = 0; j < list2.size(); j++) {
-                list1.add(list2.get(i));
+                list1.set(j, list2.get(j));
             }
         }
         long sumOfInsertionSortTime = 0;
