@@ -74,9 +74,9 @@ public class MyTreeMap<Key extends Comparable<Key>, Value> {
         int cmp = key.compareTo(node.key);
         if (cmp == 0){
             node.value = value;
-            return node;
+            
         }
-        if (cmp < 0){
+        else if (cmp < 0){
             node.left = put(key, value, node.left);
         } else {
             node.right = put(key, value, node.right);
